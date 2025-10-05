@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  text-align: center;
+  padding: 50px;
+  background-color: #fffffb;
+}
+
+select, textarea, button {
+  padding: 10px;
+  margin-top: 15px;
+  width: 250px;
+}
+
+button {
+  background-color: #ed2c52;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e73f50;
+}
+
+nav {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #4CAF50;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ff8080;
+}
+
+th {
+  background-color: #ffd0d0;
+}

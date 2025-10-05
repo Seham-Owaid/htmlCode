@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>موقع صيانة المباني في جامعة الطائف</title>
+  <link rel="stylesheet" href="style.css">
+  <style>  
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #eee;
+      font-size: 14px;
+      color: #333;
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">الرئيسية</a> |
+    <a href="aboutUs.html">عنّا</a> |
+    <a href="contactUs.html">تواصل معنا</a>
+  </nav>
+  <hr>
+  <p> موقع صيانة المباني:</p>
+  <img src="main.jpg" alt="صورة توضيحية" width="100">
+  <h2>اختر المبنى</h2>
+  <select id="building">
+    <option value="">-- اختر --</option>
+    <option value="مبنى 2">مبنى 2</option>
+    <option value="مبنى 4">مبنى 4</option>
+    <option value="مبنى 5">مبنى 5</option>
+    <option value="مبنى 6">مبنى 6</option>
+    <option value="مبنى 7">مبنى 7</option>
+    <option value="مبنى 8">مبنى 8</option>
+    <option value="مبنى 9">مبنى 9</option>
+    <option value="مبنى 10">مبنى 10</option
+    <option value="مبنى 11">مبنى 11</option>
+    <option value="مبنى 12">مبنى 12</option>
+
+
+  </select>
+  <br><br> 
+  <button style="background-color: #ed2c52; color: white; cursor: pointer;" onclick="next()">التالي</button>
+  <script>
+    function next() {
+      const building = document.getElementById('building').value;
+      if (!building) {
+        alert("الرجاء اختيار المبنى");
+        return;
+      }
+      localStorage.setItem("building", building);
+      window.location.href = "problem.html";
+    }
+  </script>
+  <hr>
+  <footer>
+    <p><strong>رابط الدعم الثاني:</strong> البريد الإلكتروني: secondsupport@example.com</p>
+  </footer>
+</body>
+</html>

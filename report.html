@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>شرح المشكلة</title>
+  <link rel="stylesheet" href="style.css">
+  <style>  
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #eee;
+  
+      font-size: 14px;
+      color: #333;
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">الرئيسية</a> |
+    <a href="aboutUs.html">عنّا</a> |
+    <a href="contactUs.html">تواصل معنا</a>
+  </nav>
+  <hr>
+  <img src="main.jpg" alt="صورة توضيحية" width="100">
+  
+  <h2>شرح المشكلة</h2>
+  <form action="submit.php" method="post">
+    <textarea name="details" rows="6" placeholder="اكتب شرح المشكلة هنا" required></textarea>
+    <br><br>
+    <input type="hidden" name="building" value="">
+    <input type="hidden" name="issue" value="">
+    <button type="submit">إرسال</button>
+  </form>
+
+  <script>
+    document.querySelector('input[name="building"]').value = localStorage.getItem("building") || "";
+    document.querySelector('input[name="issue"]').value = localStorage.getItem("issue") || "";
+  </script>
+  <hr>
+  <footer>
+  <p><strong>رابط الدعم الثاني:</strong> البريد الإلكتروني: secondsupport@example.com</p>
+  </footer>
+</body>
+</html>

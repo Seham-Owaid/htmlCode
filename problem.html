@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>نوع المشكلة</title>
+  <link rel="stylesheet" href="style.css">
+  <style>  
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #eee;
+      font-size: 14px;
+      color: #333;
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">الرئيسية</a> |
+    <a href="aboutUs.html">عنّا</a> |
+    <a href="contactUs.html">تواصل معنا</a>
+  </nav>
+  <hr>
+  <img src="main.jpg" alt="صورة توضيحية" width="100">
+  <h2>اختر نوع المشكلة</h2>
+  <select id="issue">
+    <option value="">-- اختر --</option>
+    <option value="تشغيل التكييف">تشغيل التكييف</option>
+    <option value="إغلاق التكييف">إغلاق التكييف</option>
+    <option value="مشكلة كهرباء">مشكلة كهرباء</option>
+  </select>
+  <br><br>
+  <button onclick="next()">التالي</button>
+
+  <script>
+    function next() {
+      const issue = document.getElementById('issue').value;
+      if (!issue) {
+        alert("الرجاء اختيار نوع المشكلة");
+        return;
+      }
+      localStorage.setItem("issue", issue);
+      window.location.href = "report.html";
+    }
+  </script>
+  <hr>
+  <footer>
+  <p><strong>رابط الدعم الثاني:</strong> البريد الإلكتروني: secondsupport@example.com</p>
+  </footer>
+</body>
+</html>
